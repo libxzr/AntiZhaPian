@@ -47,7 +47,7 @@ class SettingActivity : AppCompatActivity() {
                     settings = getSharedPreferences("setting", 0)
 
                     editor = settings.edit()
-                    editor.putString("name", "${settingBinding.setName.text}** ")
+                    editor.putString("name", "*${settingBinding.setName.text} ")
 
                     editor.putString(
                         "id",
@@ -86,20 +86,6 @@ class SettingActivity : AppCompatActivity() {
             editor.commit()
             Toast.makeText(this@SettingActivity, "成功", Toast.LENGTH_SHORT).show()
             finish()
-        }
-
-        settingBinding.setLoadName.setOnClickListener {
-            val seed = listOf<String>(
-                "王", "李", "张", "刘", "陈", "杨", "黄", "赵", "吴", "周", "徐",
-                "孙", "马", "朱", "胡", "郭", "何", "高", "林", "郑", "谢", "罗", "梁", "宋", "唐",
-                "许", "韩", "冯", "邓", "曹", "彭", "曾", "蕭", "田", "董", "袁", "潘", "于", "蒋",
-                "蔡", "余", "杜", "叶", "程", "苏", "魏", "吕", "丁", "任", "沈", "姚", "卢", "姜",
-                "崔", "钟", "谭", "陆", "汪", "范", "金", "石", "廖", "贾", "夏", "韦", "付", "方",
-                "白", "邹", "孟", "熊", "秦", "邱", "江", "尹", "薛", "闫", "段", "雷", "侯", "龙",
-                "史", "陶", "黎", "贺", "顾", "毛", "郝", "龚", "邵", "万", "钱", "严", "覃", "武",
-                "戴", "莫", "孔", "向", "汤"
-            ).random()
-            settingBinding.setName.setText(seed)
         }
 
         settingBinding.setLoadId.setOnClickListener {

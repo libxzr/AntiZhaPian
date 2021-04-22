@@ -26,25 +26,18 @@
                     android:id="@+id/set_name_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="姓：" />
+                    android:text="名：" />
 
                 <EditText
                     android:id="@+id/set_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="246dp"
+                    android:layout_height="47dp"
                     android:ems="10"
-                    android:maxLength="2"
+                    android:hint="填名字即可，例如：近平"
                     android:inputType="textPersonName"
-                    android:hint="填姓氏即可，例如：习"
+                    android:maxLength="2"
                     android:textColorHint="#C1C1C1"
                     android:textSize="12sp" />
-
-                <ImageButton
-                    android:id="@+id/set_load_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_loop" />
-
             </TableRow>
 
             <TableRow
