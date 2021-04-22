@@ -27,7 +27,7 @@ class SettingActivity : AppCompatActivity() {
                     Toast.makeText(this@SettingActivity, "证件号不能为空。", Toast.LENGTH_SHORT).show()
                     return@setOnClickListener
                 }
-                !settingBinding.setId.text.toString().matches("^[0-6]*X?".toRegex()) -> {
+                !settingBinding.setId.text.toString().matches("^[0-9]*X?".toRegex()) -> {
                     Toast.makeText(this@SettingActivity, "证件号格式错误。", Toast.LENGTH_SHORT).show()
                     return@setOnClickListener
                 }
