@@ -59,6 +59,10 @@ class SettingActivity : AppCompatActivity() {
                     editor.putString("region", settingBinding.setRegion.text.toString())
                     editor.putString("address", settingBinding.setAddress.text.toString())
                     editor.putString("work", settingBinding.setWork.text.toString())
+                    if(settingBinding.setPhone.text.toString()!="")
+                        editor.putString("phone", settingBinding.setPhone.text.toString())
+                    else
+                        editor.remove("phone")
 
                     editor.apply()
                     Toast.makeText(this@SettingActivity, "成功", Toast.LENGTH_SHORT).show()
@@ -83,6 +87,7 @@ class SettingActivity : AppCompatActivity() {
             editor.remove("region")
             editor.remove("address")
             editor.remove("work")
+            editor.remove("phone")
             editor.commit()
             Toast.makeText(this@SettingActivity, "成功", Toast.LENGTH_SHORT).show()
             finish()
